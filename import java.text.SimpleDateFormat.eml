@@ -1,0 +1,154 @@
+Delivered-To: chiji.mathew21@gmail.com
+Received: by 2002:a05:6000:18b:0:0:0:0 with SMTP id p11csp765684wrx;
+        Mon, 24 Oct 2022 08:56:10 -0700 (PDT)
+X-Received: by 2002:a05:6808:bc8:b0:354:fb52:b644 with SMTP id o8-20020a0568080bc800b00354fb52b644mr16244200oik.188.1666626969928;
+        Mon, 24 Oct 2022 08:56:09 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1666626969; cv=none;
+        d=google.com; s=arc-20160816;
+        b=IhoEjTpA2Fl17HzUi79I/aE4WL2K7q9Mw1l08iosp1vgjj3Cws6n6QYkWnWJIUI77w
+         qSFZRN0mTAWaVCRab/VxedXvxy4Gbi6GNBWPbzzZlnq9YXTNIaB9WV7/na37dSNk8UX7
+         0XkIZhARvxG873IEOs9aIR2ldNlK/o2b3d+ZoTXBdYbWwBrGFpRZ/vIWyZZhM5Aqq8sB
+         dVorfLHVtrTdeUEZMCbl2fQzWh0nXvEeM5JoIAT5s625nHkHzpW6DWTpaSgez2zFnXPz
+         JyWsxK798i+syX/dJ/d3bQqtCXyA8NQqzfIZF2Y61LqiSAgdbJBr97W9kQkR9a9/5dJL
+         Qnig==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=to:subject:message-id:date:from:in-reply-to:references:mime-version
+         :dkim-signature;
+        bh=5ZlEotyPBLr1K4c/uO0t+GU/V7hiW7UXiE5Jy4Z8v14=;
+        b=bHrao8EKb6uNHyl0TrbJwewbbR174tR/VxV+a7lXAQNeaYotzmMyK/GWAhpqNw9zs+
+         A1wXxXfd/BI0aEq4OvtM+1zGG23t2I5LTXg7ysi8jZpAivrZIyCCv/HMUr3QuZVc2tDP
+         7u9QVn8MrW2ax/XbUhc8EjoOBoGj/nOGye4YpDHH8ZNljiwCmjpUgR7ZprEbi1J++LcG
+         3usdUwQHeyC6000lCyYl3t58BCzapYdDJSXzZwiadAislheBcRxxB5X/fMJ7uQWiQB+u
+         Pzfsy1gUGdAVMS+pF6KFH6vYIg9JuQnrvFHVCtk7P+SsFxxEcEKn8azz4hwlW32fz/2R
+         gbZA==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20210112 header.b=DNwAtBhu;
+       spf=pass (google.com: domain of aancy.maria@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=aancy.maria@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+Return-Path: <aancy.maria@gmail.com>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id v66-20020aca6145000000b0033a87d7d56bsor9702805oib.88.2022.10.24.08.56.09
+        for <chiji.mathew21@gmail.com>
+        (Google Transport Security);
+        Mon, 24 Oct 2022 08:56:09 -0700 (PDT)
+Received-SPF: pass (google.com: domain of aancy.maria@gmail.com designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20210112 header.b=DNwAtBhu;
+       spf=pass (google.com: domain of aancy.maria@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=aancy.maria@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20210112;
+        h=to:subject:message-id:date:from:in-reply-to:references:mime-version
+         :from:to:cc:subject:date:message-id:reply-to;
+        bh=5ZlEotyPBLr1K4c/uO0t+GU/V7hiW7UXiE5Jy4Z8v14=;
+        b=DNwAtBhuC4C2ZU1Ms+TiJmlD2gsC7AEUJZnP9Elw9Wuz8N8vVZkypzQ9AXvbx1zKJ7
+         mIxQc6XgFogaZydd7xabJJyXbCRE6WY8M73sUboBd6LsLWNpD3Mnby6ewFA4R3HQKoff
+         3SOcVPdSKU1ltbA6uRsh88KKvv4MPwzGNi1xfwPeFlfqrjjbSNrnbD6Tt0jCA9EhE0LA
+         YeUMXr/3RRiGF2+OD+UV4Ram3VQ8djPmRvhiLIbsYu7BO2qZ4f/3uXH8YeRxr/zOIFc+
+         9F/zdt++o3srUVPfhP9JHV/GhMKo74M93R/iA1UdvahnRBh0es9uzdaPy+i6LXcnondh
+         v/hg==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20210112;
+        h=to:subject:message-id:date:from:in-reply-to:references:mime-version
+         :x-gm-message-state:from:to:cc:subject:date:message-id:reply-to;
+        bh=5ZlEotyPBLr1K4c/uO0t+GU/V7hiW7UXiE5Jy4Z8v14=;
+        b=psEO+hErWglR6CMrvp0ZVLEOItXTc1zAArqQgFQiQV7z/g092jWcXb/1oE/K3fXcSU
+         NPUe/XPrP2YOV9TSy0NFkjl7ObDOWDnHwk1zK1+EZIWpFZ+OZ/nuU6s9fILT+PUVTpCJ
+         wL9ypbGbjVM37QxUmK2kPfu6qLoAOmTkQdmdmHW6izBJVVJvv5YNJMsWL1HfFnCd+J2f
+         Mwjjc4uhqKXIMk//7ZJ2t1FuqNGIk/nqoFgtws8KCqNbrkFOAJznmUf9ujvFZReYLO4x
+         wXYhrffFquWNiSmHPnB2l1pk7AjLXBT083/Uwfd0AEG/HFL5QJPk9ww+bN73dZ0RDD3q
+         JGQg==
+X-Gm-Message-State: ACrzQf1BanXIvdPq2KIh6lv7hVizFmSaRj4BF+8SJEqSU/KZJy3sa9XC
+	bJ3C2twitkJ3BHAxpbGwAiRCT4MzVWP9i+syvRZFAdWb
+X-Google-Smtp-Source: AMsMyM4bzRAW3oO0ZCO3u08ZKUtWpHJm/3VacSUfxruvxFsCZednpUtrXVPagkbDmmEtoCCkOWBKqBqkvZnZb6uvFwQ=
+X-Received: by 2002:aca:2207:0:b0:354:4cdb:72bf with SMTP id
+ b7-20020aca2207000000b003544cdb72bfmr16238878oic.71.1666626969206; Mon, 24
+ Oct 2022 08:56:09 -0700 (PDT)
+MIME-Version: 1.0
+References: <CADxigLwM7xS+PESuJ71UuonWiuCe3TyQTjjf_gDK=XEUiGpPmQ@mail.gmail.com>
+In-Reply-To: <CADxigLwM7xS+PESuJ71UuonWiuCe3TyQTjjf_gDK=XEUiGpPmQ@mail.gmail.com>
+From: Nina M <aancy.maria@gmail.com>
+Date: Mon, 24 Oct 2022 11:55:58 -0400
+Message-ID: <CA+sakUrrGwZpRUpPOcv1=2m50J==PAYke0kskUvLJwX06rwzPA@mail.gmail.com>
+Subject: Fwd: import java.text.SimpleDateFormat
+To: "chiji.mathew21@gmail.com" <chiji.mathew21@gmail.com>
+Content-Type: multipart/alternative; boundary="0000000000007905a905ebc9d46f"
+
+--0000000000007905a905ebc9d46f
+Content-Type: text/plain; charset="UTF-8"
+
+---------- Forwarded message ---------
+From: chichu mathew <springdales2006@gmail.com>
+Date: Mon, Oct 24, 2022 at 11:54 AM
+Subject: import java.text.SimpleDateFormat
+To: <aancy.maria@gmail.com>
+
+
+import java.text.SimpleDateFormat
+import java.util.Date
+
+Date now = new Date();
+Calendar calendar = Calendar.getInstance();
+calendar.setTime(now);
+
+int yearNow = calendar.get(Calendar.YEAR)
+int monthNow = calendar.get(Calendar.MONTH)
+int dayNow = calendar.get(Calendar.DAY_OF_MONTH)
+
+println(dayNow)
+println("\n")
+println(monthNow+1)
+println(yearNow)
+
+
+if (dayNow==28 || dayNow==29 || dayNow==30 || dayNow==31)
+{
+dayNow=27
+}
+else
+{
+dayNow=dayNow
+}
+println(dayNow)
+if(monthNow==12)
+{
+monthNow=1
+}
+else
+{
+monthNow=monthNow+1
+}
+println(monthNow)
+String dayVal=dayNow
+
+String monthVal=monthNow
+
+println(dayVal)
+
+println(monthVal)
+
+--0000000000007905a905ebc9d46f
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><br><br><div class=3D"gmail_quote"><div dir=3D"ltr" class=
+=3D"gmail_attr">---------- Forwarded message ---------<br>From: <strong cla=
+ss=3D"gmail_sendername" dir=3D"auto">chichu mathew</strong> <span dir=3D"au=
+to">&lt;<a href=3D"mailto:springdales2006@gmail.com">springdales2006@gmail.=
+com</a>&gt;</span><br>Date: Mon, Oct 24, 2022 at 11:54 AM<br>Subject: impor=
+t java.text.SimpleDateFormat<br>To:  &lt;<a href=3D"mailto:aancy.maria@gmai=
+l.com">aancy.maria@gmail.com</a>&gt;<br></div><br><br><div>import java.text=
+.SimpleDateFormat <br>import java.util.Date<br><br>Date now =3D new Date();=
+<br>Calendar calendar =3D Calendar.getInstance();<br>calendar.setTime(now);=
+<br><br>int yearNow =3D calendar.get(Calendar.YEAR)<br>int monthNow =3D cal=
+endar.get(Calendar.MONTH)<br>int dayNow =3D calendar.get(Calendar.DAY_OF_MO=
+NTH)<br><br>println(dayNow)<br>println(&quot;\n&quot;)<br>println(monthNow+=
+1)<br>println(yearNow)<br><br><br>if (dayNow=3D=3D28 || dayNow=3D=3D29 || d=
+ayNow=3D=3D30 || dayNow=3D=3D31)<br>{<br>    dayNow=3D27<br>}<br>else<br>{<=
+br>    dayNow=3DdayNow<br>}<br>println(dayNow)<br>if(monthNow=3D=3D12)<br>{=
+<br>monthNow=3D1<br>}<br>else<br>{<br>monthNow=3DmonthNow+1<br>}<br>println=
+(monthNow)<br>String dayVal=3DdayNow<br><br>String monthVal=3DmonthNow<br><=
+br>println(dayVal)<br><br>println(monthVal)<br><br></div>
+</div></div>
+
+--0000000000007905a905ebc9d46f--
